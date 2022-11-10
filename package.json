@@ -14,7 +14,7 @@
     "vue-confetti": "^2.3.0",
     "vue-confetti-explosion": "^1.0.1",
     "vue-universal-modal": "^1.1.4",
-    "vue3-fortune-wheel": "1.0.0",
+    "vue3-fortune-wheel": "^1.0.0",
     "vue3-roulette": "^0.2.0"
   },
   "devDependencies": {

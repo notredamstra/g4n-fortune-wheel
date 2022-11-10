@@ -55,7 +55,7 @@ export default {
         width: 190,
         height: 180,
         src:
-          "/g4n-fortune-wheel/gif-lan.gif",
+          "/gif-lan.gif",
       },
       data: items,
       active: false,
