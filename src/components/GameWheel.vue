@@ -56,6 +56,7 @@ export default {
         confettiRadius: 8,
       })
       this.showModal();
+      sessionStorage.setItem('prevResult', result);
     },
     spinTheWheel() {
       if(this.active == true){
@@ -79,7 +80,6 @@ export default {
       while(result == previousResult){
         result = Math.ceil(Math.random() * (this.data.length - 1) + 1);
       }
-      sessionStorage.setItem('prevResult', result);
       return result;
     },
     showModal(){
