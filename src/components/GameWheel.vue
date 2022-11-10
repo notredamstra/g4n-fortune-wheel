@@ -6,7 +6,24 @@ const jsConfetti = new JSConfetti()
 
 const generateWheelItems = () => {
       let items = [];
-      let gameTitles = JSON.parse(localStorage.getItem('games')).names;
+      let gameTitles = [];
+      try{
+        gameTitles = JSON.parse(localStorage.getItem('games')).names;
+      }catch{
+        localStorage.setItem('games', JSON.stringify({
+          "names": [
+            "BlazeRush",
+            "Soldat",
+            "Flatout",
+            "CS 1.6",
+            "Unreal Tournament",
+            "Quake 3",
+            "Trackmania",
+            "Call of Duty"
+            ]
+        }));
+        JSON.parse(localStorage.getItem('games')).names;
+      } 
 
       for (let index = 0; index < gameTitles.length; index++) {
         let bgColor = index % 2 == 0 ? "#04DFBF" : "#9807DF"
@@ -38,7 +55,7 @@ export default {
         width: 190,
         height: 180,
         src:
-          "/gif-lan.gif",
+          "/g4n-fortune-wheel/gif-lan.gif",
       },
       data: items,
       active: false,
